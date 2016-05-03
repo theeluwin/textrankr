@@ -1,14 +1,15 @@
-from distutils.core import setup
+from setuptools import find_packages, setup
 
 setup(
     name='textrankr',
-    packages=['textrankr'],
-    version='0.1',
-    description='TextRank for Korean',
-    author='theeluwin',
+    version='0.2',
+    license='MIT',
+    author='Jamie Seol',
     author_email='theeluwin@gmail.com',
     url='https://github.com/theeluwin/textrankr',
-    download_url='https://github.com/theeluwin/textrankr/tarball/0.1',
-    keywords=['textrank', 'korean', 'networkx', 'konlpy'],
+    description='TextRank for Korean',
+    packages=find_packages(),
+    include_package_data=True,
+    install_requires=['setuptools', 'networkx', 'konlpy', 'jpype1'],
     classifiers=[],
 )

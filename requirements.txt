@@ -1,4 +1,0 @@
-decorator==4.0.9
-JPype1==0.6.1
-konlpy==0.4.4
-networkx==1.11
