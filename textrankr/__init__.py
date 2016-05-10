@@ -60,6 +60,12 @@ class Sentence:
     def __str__(self):
         return str(self.index)
 
+    def __repr__(self):
+        try:
+            return self.text.encode('utf-8')
+        except:
+            return self.text
+
     def __eq__(self, another):
         return hasattr(another, 'index') and self.index == another.index
 
@@ -78,3 +84,10 @@ class TextRank:
         for sentence in self.sentences:
             self.nouns += sentence.nouns
         self.bow = collections.Counter(self.nouns)
+
+    def summarize(self, count=3):
+        if not hasattr(self, 'reordered'):
+            return ""
+        candidates = self.reordered[:count]
+        candidates = sorted(candidates, key=lambda sentence: sentence.index)
+        return '\n'.join([candidate.text for candidate in candidates])
