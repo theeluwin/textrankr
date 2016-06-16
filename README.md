@@ -5,6 +5,13 @@ Reorder sentences using [TextRank][1] algorithm.
 Click [here][2] to see how to install [KoNLPy][3] properly.
 
 
+Installation
+-----
+
+```sh
+pip install textrankr
+```
+
 Usage
 -----
 
