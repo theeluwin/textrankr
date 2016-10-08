@@ -36,7 +36,9 @@ def build_graph(sentences):
     graph.add_nodes_from(sentences)
     pairs = list(itertools.combinations(sentences, 2))
     for pair in pairs:
-        graph.add_edge(pair[0], pair[1], weight=co_occurence(pair[0], pair[1]))
+        weight = co_occurence(pair[0], pair[1])
+        if weight:
+            graph.add_edge(pair[0], pair[1], weight=weight)
     return graph
 
 
