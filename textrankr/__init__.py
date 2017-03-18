@@ -36,13 +36,13 @@ def build_graph(sentences):
     graph.add_nodes_from(sentences)
     pairs = list(itertools.combinations(sentences, 2))
     for pair in pairs:
-        weight = co_occurence(pair[0], pair[1])
+        weight = co_occurrence(pair[0], pair[1])
         if weight:
             graph.add_edge(pair[0], pair[1], weight=weight)
     return graph
 
 
-def co_occurence(sentence1, sentence2):
+def co_occurrence(sentence1, sentence2):
     p = sum((sentence1.bow & sentence2.bow).values())
     q = sum((sentence1.bow | sentence2.bow).values())
     return p / q if q else 0
