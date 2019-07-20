@@ -1,0 +1,10 @@
+build/
+dist/
+venv/
+.coverage
+.gitignore
+.dockerignore
+Dockerfile
+LICENSE
+REAMDE.md
+*.egg-info

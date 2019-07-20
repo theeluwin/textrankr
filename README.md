@@ -1,39 +1,45 @@
-TextRank for Korean
-==========
+# TextRank for Korean
 
-Reorder sentences using [TextRank][1] algorithm.
-Click [here][2] to see how to install [KoNLPy][3] properly.
+Reorder sentences using [TextRank](http://digital.library.unt.edu/ark:/67531/metadc30962/) algorithm.
+Click [here](http://konlpy.org/en/latest/install/) to see how to install [KoNLPy](http://konlpy.org/) properly (you'll need some java stuff).
 
-Upgraded version named [lexrankr][4] using [LexRank][5] is available too!
+Check out [lexrankr](https://github.com/theeluwin/lexrankr), which is another awesome summarizer!
 
-Installation
------
+Not available for Python 2 anymore (if necessary, use version 0.3).
 
-```sh
+## Installation
+
+```bash
 pip install textrankr
 ```
 
-Usage
------
+## Usage
 
 ```python
-from __future__ import print_function
 from textrankr import TextRank
 
 textrank = TextRank(your_text_here)
-print(textrank.summarize())
+print(textrank.summarize())  # gives you some text
+print(textrank.summarize(3, verbose=False))  # up to 3 sentences, returned as list
 ```
 
+## Test
 
-Test
------
+Testing requires some additional packages (`flake8` is optional, though).
 
 ```bash
-python -m tests.test
+$ pip install nose nose-exclude flake8 coverage
 ```
 
-[1]: http://digital.library.unt.edu/ark:/67531/metadc30962/
-[2]: http://konlpy.org/en/latest/install/
-[3]: http://konlpy.org/
-[4]: https://github.com/theeluwin/lexrankr
-[5]: http://dl.acm.org/citation.cfm?id=1622501
+Test with [nose](https://nose.readthedocs.io/).
+
+```bash
+$ nosetests --config=.noserc
+```
+
+Or, you can use docker.
+
+```bash
+$ docker build -t textrankr -f Dockerfile .
+$ docker run textrankr
+```

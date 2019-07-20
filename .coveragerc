@@ -1,0 +1,7 @@
+[run]
+source=./tests/
+omit=./venv/
+
+[report]
+precision=2
+show_missing=1

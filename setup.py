@@ -1,20 +1,19 @@
 # -*- coding: utf-8 -*-
 
-import sys
-
-from setuptools import find_packages, setup
-from setuptools.command.test import test
+from setuptools import setup
+from setuptools import find_packages
 
 
-requirements = ['setuptools', 'networkx', 'konlpy']
-if sys.version_info < (3, ):
-    requirements.append('jpype1')
-else:
-    requirements.append('jpype1-py3')
+requirements = [
+    'setuptools',
+    'networkx',
+    'jpype1-py3',
+    'konlpy',
+]
 
 setup(
     name='textrankr',
-    version='0.3',
+    version='0.4',
     license='MIT',
     author='Jamie Seol',
     author_email='theeluwin@gmail.com',
@@ -23,5 +22,5 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=requirements,
-    classifiers=[],
+    classifiers=[]
 )
