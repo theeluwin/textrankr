@@ -7,4 +7,4 @@ before_install:
   - docker build -t textrankr -f Dockerfile .
 
 script:
-  - docker run textrankr bash -c 'nosetests --config=.noserc && coveralls'
+  - docker run -e COVERALLS_REPO_TOKEN="$COVERALLS_REPO_TOKEN" textrankr bash -c 'nosetests --config=.noserc && coveralls'
