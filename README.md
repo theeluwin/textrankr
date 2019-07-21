@@ -1,5 +1,8 @@
 # TextRank for Korean
 
+[![Build Status](https://travis-ci.org/theeluwin/textrankr.svg?branch=master)](https://travis-ci.org/theeluwin/textrankr)
+[![Coverage Status](https://coveralls.io/repos/theeluwin/textrankr/badge.svg?branch=master&service=github)](https://coveralls.io/github/theeluwin/textrankr?branch=master)
+
 Reorder sentences using [TextRank](http://digital.library.unt.edu/ark:/67531/metadc30962/) algorithm.
 Click [here](http://konlpy.org/en/latest/install/) to see how to install [KoNLPy](http://konlpy.org/) properly (you'll need some java stuff).
 

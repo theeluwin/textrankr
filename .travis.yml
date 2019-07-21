@@ -5,7 +5,6 @@ services:
 
 before_install:
 - docker build -t textrankr -f Dockerfile .
-- docker run textrankr
 
 script:
-- nosetests --config=.noserc
+- docker run textrankr
