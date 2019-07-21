@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-- docker build -t textrankr -f Dockerfile .
+  - docker build -t textrankr -f Dockerfile .
 
 script:
-- docker run textrankr
+  - docker run textrankr bash -c 'nosetests --config=.noserc && coveralls'

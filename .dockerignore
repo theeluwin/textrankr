@@ -4,6 +4,7 @@ venv/
 .coverage
 .gitignore
 .dockerignore
+.travis.yml
 Dockerfile
 LICENSE
 REAMDE.md

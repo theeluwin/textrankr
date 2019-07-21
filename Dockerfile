@@ -7,7 +7,7 @@ RUN mkdir -p /workspace
 WORKDIR /workspace
 
 # install packages
-RUN pip3 install setuptools networkx nose nose-exclude flake8 coverage
+RUN pip3 install setuptools networkx nose nose-exclude flake8 coverage coveralls
 
 # run
 ADD . /workspace/
