@@ -1,0 +1,11 @@
+language: python
+
+services:
+  - docker
+
+before_install:
+- docker build -t textrankr -f Dockerfile .
+- docker run textrankr
+
+script:
+- nosetests --config=.noserc
