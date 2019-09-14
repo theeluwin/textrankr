@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+import os
+import warnings
+
 from setuptools import setup
 from setuptools import find_packages
 
@@ -10,6 +13,10 @@ requirements = [
     'jpype1-py3',
     'konlpy',
 ]
+
+if os.name == 'nt':
+    warnings.warn("See http://konlpy.org/en/latest/install/#id2 to properly install KoNLPy.", RuntimeWarning)
+
 
 setup(
     name='textrankr',

@@ -7,5 +7,5 @@ venv/
 .travis.yml
 Dockerfile
 LICENSE
-REAMDE.md
+README.md
 *.egg-info
