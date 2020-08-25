@@ -20,7 +20,7 @@ if os.name == 'nt':
 
 setup(
     name='textrankr',
-    version='0.4',
+    version='0.5',
     license='MIT',
     author='Jamie Seol',
     author_email='theeluwin@gmail.com',

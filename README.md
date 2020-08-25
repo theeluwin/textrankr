@@ -32,18 +32,18 @@ print(textrank.summarize(3, verbose=False))  # up to 3 sentences, returned as li
 Testing requires some additional packages (`flake8` is optional, though).
 
 ```bash
-$ pip install nose nose-exclude flake8 coverage
+pip install nose nose-exclude flake8 coverage
 ```
 
 Test with [nose](https://nose.readthedocs.io/).
 
 ```bash
-$ nosetests --config=.noserc
+nosetests --config=.noserc
 ```
 
 Or, you can use docker.
 
 ```bash
-$ docker build -t textrankr -f Dockerfile .
-$ docker run textrankr
+docker build -t textrankr -f Dockerfile .
+docker run textrankr
 ```
