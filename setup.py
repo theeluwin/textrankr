@@ -10,7 +10,6 @@ from setuptools import find_packages
 requirements = [
     'setuptools',
     'networkx',
-    'jpype1-py3',
     'konlpy',
 ]
 
@@ -20,7 +19,7 @@ if os.name == 'nt':
 
 setup(
     name='textrankr',
-    version='0.5',
+    version='0.6',
     license='MIT',
     author='Jamie Seol',
     author_email='theeluwin@gmail.com',
