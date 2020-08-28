@@ -4,12 +4,16 @@ from re import split
 from networkx import Graph
 from networkx import pagerank
 from itertools import combinations
+from .phraser import OktPhraser
 from .sentence import Sentence
 
 
 class TextRank(object):
 
-    def __init__(self, text):
+    def __init__(self, text, phraser=None):
+        self.phraser = phraser
+        if phraser is None:
+            self.phraser = OktPhraser().phrases
         self.text = text.strip()
         self.build()
 
@@ -17,7 +21,8 @@ class TextRank(object):
         self._build_sentences()
         self._build_graph()
         self.pageranks = pagerank(self.graph, weight='weight')
-        self.reordered = sorted(self.pageranks, key=self.pageranks.get, reverse=True)
+        self.reordered = sorted(
+            self.pageranks, key=self.pageranks.get, reverse=True)
 
     def _build_sentences(self):
         dup = {}
@@ -29,7 +34,8 @@ class TextRank(object):
                 candidate = candidate.strip(' ').strip('.')
             if len(candidate) and candidate not in dup:
                 dup[candidate] = True
-                self.sentences.append(Sentence(candidate + '.', index))
+                self.sentences.append(
+                    Sentence(self.phraser, candidate + '.', index))
                 index += 1
         del dup
         del candidates
@@ -48,7 +54,8 @@ class TextRank(object):
         return p / q if q else 0
 
     def summarize(self, count=3, verbose=True):
-        results = sorted(self.reordered[:count], key=lambda sentence: sentence.index)
+        results = sorted(self.reordered[:count],
+                         key=lambda sentence: sentence.index)
         results = [result.text for result in results]
         if verbose:
             return '\n'.join(results)
