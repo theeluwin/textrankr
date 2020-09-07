@@ -12,7 +12,7 @@ requirements: List[str] = [
 
 setup(
     name='textrankr',
-    version='0.7',
+    version='1.0',
     license='MIT',
     author='Jamie Seol',
     author_email='theeluwin@gmail.com',
