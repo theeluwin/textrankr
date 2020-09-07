@@ -7,11 +7,14 @@ RUN mkdir -p /workspace
 WORKDIR /workspace
 
 # install packages
-RUN pip3 install setuptools networkx nose nose-exclude flake8 coverage coveralls
+RUN pip install -U pip
+RUN pip install setuptools networkx nose nose-exclude flake8 coverage coveralls requests
 
-# run
+# install this package
 ADD . /workspace/
 RUN python setup.py build && \
 	python setup.py install
+
+# run test
 ENTRYPOINT []
 CMD ["nosetests", "--config=.noserc"]

@@ -1,18 +1,23 @@
-# -*- coding: utf-8 -*-
-
 from collections import Counter
 
 
-class Sentence(object):
+class Sentence:
+    """
+        The purpose of this class is as follows:
 
-    def __init__(self, phraser, text, index=0):
-        self.index = index
-        self.text = text.strip()
-        self.tokens = phraser(self.text)
-        self.bow = Counter(self.tokens)
+        1. In order to use the 'pagerank' function in the networkx library, you need a hashable object.
+        2. Summaries should keep the sentence order from its original text to improve the verbosity.
 
-    def __str__(self):
+        Note that the 'bow' stands for 'bag-of-words'.
+    """
+
+    def __init__(self, index: int, text: str, bow: Counter) -> None:
+        self.index: int = index
+        self.text: str = text
+        self.bow: Counter = bow
+
+    def __str__(self) -> str:
         return self.text
 
-    def __hash__(self):
+    def __hash__(self) -> int:
         return self.index
