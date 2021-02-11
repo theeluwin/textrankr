@@ -1,4 +1,11 @@
+from typing import Tuple
+
 from collections import Counter
+
+
+__all__: Tuple[str, ...] = (
+    'Sentence',
+)
 
 
 class Sentence:

@@ -4,10 +4,10 @@
 [![Coverage Status](https://coveralls.io/repos/github/theeluwin/textrankr/badge.svg?branch=main)](https://coveralls.io/github/theeluwin/textrankr?branch=main)
 [![PyPI version](https://badge.fury.io/py/textrankr.svg)](https://badge.fury.io/py/textrankr)
 
-Reorder sentences using the [TextRank](http://digital.library.unt.edu/ark:/67531/metadc30962/) algorithm.
+Reorder sentences using [TextRank](http://digital.library.unt.edu/ark:/67531/metadc30962/) algorithm.
 
 * Mostly designed for Korean, but not limited to.
-* Check out [lexrankr](https://github.com/theeluwin/lexrankr), which is an another awesome summarizer!
+* Check out [lexrankr](https://github.com/theeluwin/lexrankr), which is another awesome summarizer!
 * Not available for Python 2 anymore (if necessary, use version 0.3).
 
 ## Installation
@@ -18,7 +18,7 @@ pip install textrankr
 
 ## Tokenizers
 
-Tokenizers are not included. You have to implement it by yourself.
+Tokenizers are not included. You have to implement one by yourself.
 
 Example:
 

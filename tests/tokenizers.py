@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import json
 import requests
 
@@ -11,7 +9,7 @@ from requests.models import Response
 
 class OktTokenizer:
     """
-        A POS-tagger based tokenizer functor. Note that these are just an examples. Using phrases function rather than a mere POS tokenizer seems better.
+        A POS-tagger based tokenizer functor. Note that these are just examples. The `phrases` function usually gives a better result than an ordinary POS tokenizer.
 
         Example:
             tokenizer: OktTokenizer = OktTokenizer()
@@ -27,7 +25,7 @@ class OktTokenizer:
 
 class ApiTokenizer:
     """
-        An API based tokenizer functor, assuming that the response body is a jsonifyable string with content of list of str tokens.
+        An API based tokenizer functor, assuming that the response body is a jsonifyable string with content of list of `str` tokens.
 
         Example:
             tokenizer: ApiTokenizer = ApiTokenizer()
