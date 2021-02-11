@@ -32,7 +32,7 @@ def parse_text_into_sentences(text: str, tokenizer: Callable[[str], List[str]]) 
     sentences: List[Sentence] = []
 
     # parse text
-    candidates: List[str] = split(r'(?:(?<=[^0-9])\.|\n)', text)
+    candidates: List[str] = split(r'(?:(?<=[^0-9])\.|\n|!|\?)', text)
     for candidate in candidates:
 
         # cleanse the candidate
