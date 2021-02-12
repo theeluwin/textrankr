@@ -1,6 +1,6 @@
 # textrankr
 
-[![Build Status](https://travis-ci.org/theeluwin/textrankr.svg?branch=main)](https://travis-ci.org/theeluwin/textrankr)
+[![Build Status](https://travis-ci.com/theeluwin/textrankr.svg?branch=main)](https://travis-ci.com/theeluwin/textrankr)
 [![Coverage Status](https://coveralls.io/repos/github/theeluwin/textrankr/badge.svg?branch=main)](https://coveralls.io/github/theeluwin/textrankr?branch=main)
 [![PyPI version](https://badge.fury.io/py/textrankr.svg)](https://badge.fury.io/py/textrankr)
 
