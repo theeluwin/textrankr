@@ -59,7 +59,7 @@ k: int = 3  # num sentences in the resulting summary
 summarized: str = textrank.summarize(your_text_here, k)
 print(summarized)  # gives you some text
 
-# if verbose=False, it returns a list
+# if verbose = False, it returns a list
 summaries: List[str] = textrank.summarize(your_text_here, k, verbose=False)
 for summary in summaries:
     print(summary)
