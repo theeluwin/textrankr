@@ -71,5 +71,5 @@ Use docker.
 
 ```bash
 docker build -t textrankr -f Dockerfile .
-docker run textrankr
+docker run --rm -it textrankr
 ```
